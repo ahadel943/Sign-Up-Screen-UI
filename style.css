@@ -1,0 +1,143 @@
+*, *::before, *::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  border: none;
+  outline: none;
+  font-family: "Poppins", sans-serif;
+}
+
+:root {
+  --main-clr: seagreen;
+  --sec-clr: white;
+  font-size: 10px;
+}
+
+::placeholder {
+  color: var(--sec-clr);
+}
+
+input {
+  display: block;
+}
+
+.wrapper {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  background-image: url(bg.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  z-index: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow: hidden;
+}
+
+.bg-img {
+  width: 100%;
+  height: 100%;
+  background-color: #ffffff10;
+  backdrop-filter: blur(5px);
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: -100;
+}
+
+.intro {
+  width: 100%;
+  padding-top: 5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.intro .head {
+  font-size: 4rem;
+  font-weight: 700;
+  color: var(--sec-clr);
+  margin-bottom: 1rem;
+}
+
+.intro .desc {
+  font-size: 1.2rem;
+  color: var(--sec-clr);
+  font-weight: 300;
+  max-width: 60rem;
+}
+
+section.add-img {
+  width: 10rem;
+  height: 10rem;
+  border-radius: 50%;
+  border: 1px solid var(--sec-clr);
+  display: grid;
+  place-items: center;
+  margin: 1.5rem 0 1.5rem 0;
+  color: var(--sec-clr);
+  font-size: 1.5rem;
+  font-weight: 700;
+  text-align: center;
+  transition: .2s ease-in-out;
+  cursor: pointer;
+}
+
+.add-img:hover {
+  background-color: var(--sec-clr);
+  color: var(--main-clr);
+}
+
+.form-wrap {
+  padding: 2rem;
+}
+
+input[type="number"]::-webkit-inner-spin-button, 
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+}
+
+input[type="number"]{
+  -moz-appearance: textfield;
+}
+.form input {
+  padding: 1.5rem;
+  background: transparent;
+  text-align: center;
+  font-weight: 500;
+  border-radius: 2.5rem;
+  border: 1px solid var(--sec-clr);
+  margin-bottom: 1.5rem;
+  color: var(--sec-clr);
+}
+
+.form .btns-wrap {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.form .btns-wrap input{
+  display: inline-block;
+  padding: 1rem 1.5rem;
+  width: 100%;
+  background-color: var(--main-clr);
+  border: none;
+  transition: .2s ease-in-out;
+  cursor: pointer;
+}
+
+.form .btns-wrap input:hover {
+  background-color: darkred;
+}
+
+@media screen and (max-width: 600px) {
+  .intro .desc {
+    max-width: 70%;
+  }
+}
